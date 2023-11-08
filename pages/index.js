@@ -1,7 +1,6 @@
 import { getPosts } from '../services';
 import { FeaturedPosts, MainPosts } from '../sections';
-import { PostCard, ContactUs, PostWidget, Categories } from '../components';
-import HtPodcast from '../components/HtPodcast';
+import { PostCard, PostWidget, Categories } from '../components';
 
 export default function Home({ posts }) {
   return (
@@ -21,7 +20,7 @@ export default function Home({ posts }) {
           ))}
         </div>
         <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
+          <div className="lg:sticky  mt-12 srelative top-8">
             <PostWidget />
             <Categories />
             {/* <ContactUs /> */}
