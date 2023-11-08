@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import HtPodcast from '../../components/HtPodcast.jsx';
+// import HtPodcast from '../../components/HtPodcast.jsx';
 
 import { getCategories, getCategoryPost } from '../../services';
-import { PostCard, Loader, PostWidget, ContactUs } from '../../components';
+import { PostCard, Loader, PostWidget, ContactUs, Categories } from '../../components';
 
 const CategoryPost = ({ posts }) => {
   const router = useRouter();
@@ -24,7 +24,7 @@ const CategoryPost = ({ posts }) => {
         <div className="col-span-1 lg:col-span-4">
           <div className="flex flex-col lg:sticky top-10">
             <PostWidget />
-            <HtPodcast />
+            <Categories />
             <ContactUs />
           </div>
         </div>

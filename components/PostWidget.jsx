@@ -21,7 +21,7 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className="bg-white font-myfont shadow-lg border rounded-2xl py-2 pb-4 mb-8">
-      <h1 className="text-2xl  font-bold ml-4 my-4 ">{slug ? ' Benzer İçerikler' : 'Son İçerikler'}</h1>
+      <h1 className="text-2xl  font-bold ml-4 my-4 ">{slug ? ' Similiar ' : 'Last'}</h1>
       {relatedPosts.map((post, index) => (
         <div key={index} className="flex items-center w-full px-2 mb-4">
           <div className="flex-grow ml-2 mr-4">
