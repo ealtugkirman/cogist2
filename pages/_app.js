@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { NextSeo } from 'next-seo';
 import wave from '../public/assets/wave.svg';
 import '../styles/globals.scss';
 import { Layout } from '../components';
@@ -9,7 +8,7 @@ import { Layout } from '../components';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="hukukteknolojisi.com"
         name="robots"
         content="index,follow"
@@ -34,7 +33,7 @@ function MyApp({ Component, pageProps }) {
           { property: 'og:locale', content: 'en_tr' },
         ]}
         index
-      />
+      /> */}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index,follow" />
