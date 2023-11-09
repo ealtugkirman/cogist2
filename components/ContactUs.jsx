@@ -62,7 +62,7 @@ export const ContactUs = () => {
                     Adınız
                   </label>
                   <input
-                    placeholder="Emre Altug"
+                    placeholder="Your name"
                     type="text"
                     id="name"
                     name="user_name"
@@ -96,7 +96,7 @@ export const ContactUs = () => {
                     Message
                   </label>
                   <textarea
-                    placeholder="Hey"
+                    placeholder="Your message"
                     id="message"
                     name="message"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
@@ -105,12 +105,11 @@ export const ContactUs = () => {
               </div>
               <div className="p-2 flex justify-center mb-4">
                 <button
-                  type="submit"
-                  typeof="submit"
+                  type="submit" // This is the valid attribute to specify the button type
                   value="send"
-                  className=" text-white hover:bg-black  py-2 px-10 focus:outline-none bg-blue-500 rounded-full text-md lg:text-lg"
+                  className="text-white hover:bg-black py-2 px-10 focus:outline-none bg-blue-500 rounded-full text-md lg:text-lg"
                 >
-                  Gönder
+                  Send
                 </button>
               </div>
             </form>

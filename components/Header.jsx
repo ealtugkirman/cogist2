@@ -134,17 +134,16 @@ const Header = () => {
       {/* Hamburger Menu */}
       <div className="flex md:flex-row items-center justify-evenly">
         <div className="flex z-50 fixed justify-between px-12 items-center  bg-white  min-w-full  shadow-2xl lg:hidden  pt-20 pb-4  ">
-          <h1 className="text-2xl font-bold  lg:hidden ">
-            <Link href="/">
-              hukukteknolojisi.com
-            </Link>
+          <h1 className="text-2xl font-bold lg:hidden">
+            <Link href="/">hukukteknolojisi.com</Link>
           </h1>
-          <div className="lg:hidden ">
+          <div className="lg:hidden">
             <button
               id="menu-btn"
               ref={btnRef}
               type="button"
               className="z-50 block hamburger lg:hidden focus:outline-none"
+              aria-label="Toggle Menu"
             >
               <span className="hamburger-top" />
               <span className="hamburger-middle" />
