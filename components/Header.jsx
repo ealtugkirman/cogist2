@@ -88,16 +88,16 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed z-40  top-0 w-full">
-      <div id="navbar" className={`flex shadow-2xl bg-gray-100  font-myfont flex-col ${isScrolled ? 'py-0' : 'py-0'} ${isScrolled ? 'lg:py-1' : 'lg:py-1'}`}>
-        <div className="text-black mx-14  items-center bg-gray-100 justify-center hidden lg:flex flex-row ">
-          <div className="w-1/4  flex">
+    <div className="fixed z-40 top-0 w-full">
+      <div id="navbar" className={`flex shadow-2xl bg-gray-100 font-myfont flex-col ${isScrolled ? 'py-0' : 'py-0'} ${isScrolled ? 'lg:py-1' : 'lg:py-1'}`}>
+        <div className="text-black mx-14 items-center bg-gray-100 justify-center hidden lg:flex flex-row ">
+          <div className="w-1/4 flex">
             <Link className="" href="/">
               <Image
                 src={logo}
                 width={50}
                 height={50}
-                alt="HukukTeknolojisi.com"
+                alt="cognitive.com"
               />
             </Link>
           </div>
@@ -105,27 +105,26 @@ const Header = () => {
             {categories.map((category, index) => (
               <span
                 key={index}
-                className="text-gray-500   text-md px-4 duration-300 ease-in-out hover:text-blue-500 hover:cursor-pointer"
+                className="text-gray-500 text-md px-4 duration-300 ease-in-out hover:text-blue-500 hover:cursor-pointer"
               >
                 <Link href={`/category/${category.slug}`}>
                   {category.name}
                 </Link>
               </span>
-            )) }
+            ))}
           </div>
 
-          <div className="flex flex-row text-blue-500  hover:cursor-pointer text-2xl w-1/7 items-center space-x-4  ">
-            <div className="bg-blue-500 cursor-pointer  hover:bg-gray-100 hover:text-blue-500 text-lg text-white rounded-2xl px-3 py-1">
-
+          <div className="flex flex-row text-blue-500 hover:cursor-pointer text-2xl w-1/7 items-center space-x-4  ">
+            <div className="bg-blue-500 cursor-pointer hover:bg-gray-100 hover:text-blue-500 text-lg text-white rounded-2xl px-3 py-1" aria-label="Toggle Menu">
               <p>
                 Bize Ulaşın
               </p>
             </div>
-            <a href="https://www.twitter.com">
+            <a href="https://www.twitter.com" aria-label="Twitter Link">
               <FaTwitter />
             </a>
 
-            <a href="https://www.twitter.com">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn Link">
               <AiFillLinkedin />
             </a>
           </div>
@@ -133,9 +132,9 @@ const Header = () => {
       </div>
       {/* Hamburger Menu */}
       <div className="flex md:flex-row items-center justify-evenly">
-        <div className="flex z-50 fixed justify-between px-12 items-center  bg-white  min-w-full  shadow-2xl lg:hidden  pt-20 pb-4  ">
+        <div className="flex z-50 fixed justify-between px-12 items-center bg-white min-w-full shadow-2xl lg:hidden pt-20 pb-4">
           <h1 className="text-2xl font-bold lg:hidden">
-            <Link href="/">hukukteknolojisi.com</Link>
+            <Link href="/">cognitive.com</Link>
           </h1>
           <div className="lg:hidden">
             <button
@@ -150,36 +149,35 @@ const Header = () => {
               <span className="hamburger-bottom" />
             </button>
           </div>
-
         </div>
-        {/* Mobil Menu */}
+        {/* Mobile Menu */}
         <div
           id="menu"
           ref={menuRef}
-          className=" fixed font-myfont bg-white z-30 top-0 bottom-0 left-0 flex-col text-center hidden lg:hidden w-2/3 min-h-screen py-1 pt-40 space-y-4 text-xl text-white "
+          className="fixed font-myfont bg-white z-30 top-0 bottom-0 left-0 flex-col text-center hidden lg:hidden w-2/3 min-h-screen py-1 pt-40 space-y-4 text-xl text-white"
         >
           <div className="absolute" />
           {categories.map((category, index) => (
             <span
               key={index}
-              className="text-black  text-lg px-8 "
+              className="text-black text-lg px-8"
             >
               <Link ref={btnRef} href={`/category/${category.slug}`}>
                 {category.name}
               </Link>
             </span>
           ))}
-          <p className="text-black text-left text-sm mx-8 pt-10  ">
-            hukukteknolojisi.com, dünya genelinde
-            teknolojiyi etkileyen hukuki gelişmeler ile
-            hukuku etkileyen teknolojik gelişmeleri inceler
-            ve aktarır.
+          <p className="text-black text-left text-sm mx-8 pt-10">
+            The Cognizer is a publishing platform initiated by CogIST, a cognitive science community from Turkey.
+            On this platform, articles and essays on different topics from different fields of cognitive science are published in a way that would bridge the gap between public audience and experts.
+            To accomplish this, we will ensure that the publications are argumentatively sophisticated, although not technically complex, thus preventing the loss of information and insight while popularizing academic content.
+            In this way, not only we encourage science communication in the field of cognitive science but also reach a diverse audience from all around the world, especially from the underrepresented regions.
           </p>
-          <div className="flex text-blue-900 text-2xl flex-row space-x-6 pt-6  justify-center">
-            <a href="https://www.twitter.com">
+          <div className="flex text-blue-900 text-2xl flex-row space-x-6 pt-6 justify-center">
+            <a href="https://www.twitter.com" aria-label="Twitter Link">
               <FaTwitter />
             </a>
-            <a href="https://www.twitter.com">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn Link">
               <AiFillLinkedin />
             </a>
           </div>
